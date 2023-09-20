@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Marks</title>
+    <script>
+        function myfunction(){
+            var math = Number(document.getElementById("mathInput").value);
+            var science = Number(document.getElementById("scienceInput").value);
+            var english = Number(document.getElementById("englishInput").value);
+            var average = (math + science + english) / 3;
+            var grade = '';
+
+            if (average >= 80 ){
+                grade="A";
+            }
+            else if (average >=70){
+                grade="B";
+            }
+            else if (average >=60){
+                grade="C";
+            }
+            else if (average >=50){
+                grade="D";
+            }
+            else{
+                grade="Fail";
+            }
+
+            document.getElementById("gradeOutput").textContent = "Grade: " + grade;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="mathInput">Math</label>
+            <input type="number" id="mathInput" name="math">
+        </p>
+        <p>
+            <label for="scienceInput">Science</label>
+            <input type="number" id="scienceInput" name="science">
+        </p>
+        <p>
+            <label for="englishInput">English</label>
+            <input type="number" id="englishInput" name="english">
+        </p>
+        <div id="gradeOutput"></div>
+        <input type="button" id="btn1" name="average" value="Average" onclick="myfunction()">
+    </form>
+</body>
+</html>
