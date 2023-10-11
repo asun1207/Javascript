@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <script>
+      function myClick() {
+        let op = document.getElementById("txt1").value;
+
+        let a = Number(document.getElementById("num1").value);
+
+        if (op === "multiply") {
+          let x = myFunction(a);
+          document.getElementById("demo").innerHTML = x;
+        } else if (op === "addition") {
+          let x = myFunctionadd(a);
+          document.getElementById("demo").innerHTML = x;
+        } else if (op === "subtraction") {
+          let x = myFunctionsub(a);
+          document.getElementById("demo").innerHTML = x;
+        } else if (op === "division") {
+          let x = myFunctiondivide(a);
+          document.getElementById("demo").innerHTML = x;
+        }
+        function myfunction(a) {
+          return a * 3;
+        }
+        function myfunctionadd(a) {
+          return a + 3;
+        }
+        function myfunctionsub(a) {
+          return a - 3;
+        }
+        function myFunctiondivide(a) {
+          return a / 3;
+        }
+      }
+      /*
+      function myfunction() {
+        let num1 = Number(document.getElementById("num1").value); //5
+        let a = mulnum(num1);
+        console.log(a);
+        document.getElementById("demo").innerHTML = x;
+        function myfunction(a) {
+          return (a = 3);
+        }
+      }*/
+      //coments
+      //Data types
+      //1) Integer/Number = 23, 12, 22, 3444, 8785685
+      //2) String = "", ''
+      //3) Float = 2.3, 10.4
+      //4) Boolean = True/False
+      // var = variable, let = variable, const = constant variable
+
+      /*let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        var result = "";
+        console.log(num1);
+        if (num1 > 0 && num2 > 0) {
+          result = "Positive";
+        }
+        console.log(result);
+      }
+      */
+      /*
+              if (num1 % 2 == 0) {
+                result = "Even";
+                console.log(result);
+                document.getElementById("num1").innerHTML = result;
+              }
+              document.write("Welcome to Tamwood");
+            }
+            */
+    </script>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <input type="number" id="num1" name="number1" />
+    <input type="text" id="txt1" name="operation" />
+    <button id="btn" name="button1" onclick="myClick()">Submit</button>
+  </body>
+</html>

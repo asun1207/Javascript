@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name</title>
+    <script>
+      function myClick() {
+        let num1 = Number(document.getElementById("num1").value);
+        var result = "";
+        console.log(num1);
+        if (num1 % 10 == 0) {
+          result = "True";
+        } else {
+          result = "False";
+        }
+        console.log(result);
+
+        document.getElementById("result").innerHTML = result;
+      }
+
+      /*
+      function myClick() {
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let msg = greeting(fname, lname);
+        document.getElementById("demo").innerHTML = msg;
+        function greeting(fname, lname) {
+          return "Welcome " + fname + " " + lname;
+        }
+      }
+      */
+    </script>
+  </head>
+  <body>
+    <input type="number" id="num1" name="Number1" />
+    <button id="btn" name="btn1" onclick="myClick()">Submit</button>
+    <p id="result">Is it a multiple of 10?</p>
+
+    <!--
+    <p id="demo"></p>
+    <input type="text" id="fname" name="fname" />
+    <input type="text" id="lname" name="lname" />
+    <button id="btn" name="btn1" onclick="myClick()">Submit</button>
+    -->
+  </body>
+</html>
